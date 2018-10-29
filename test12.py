@@ -4,7 +4,7 @@ import requests
 import json
 from selenium.webdriver.common.proxy import Proxy, ProxyType
 import time 
-
+import os
 caps = {}
 username = os.environ.get("CBT_USERNAME")
 key = os.environ.get("CBT_APIKEY")
