@@ -6,12 +6,12 @@ from selenium.webdriver.common.proxy import Proxy, ProxyType
 import time 
 import os
 caps = {}
-username = os.environ.get("CBT_USERNAME")
-key = os.environ.get("CBT_APIKEY")
-caps['name'] = os.environ.get("CBT_BUILD_NAME")
-caps['build'] = os.environ.get("CBT_BUILD_NUMBER")
-caps['browserName'] = "chrome"  #os.environ.get("CBT_BROWSER")
-caps['platform'] = os.environ.get("CBT_OPERATING_SYSTEM")
+username = os.environ.get("LT_USERNAME")
+key = os.environ.get("LT_APIKEY")
+caps['name'] = os.environ.get("LT_BUILD_NAME")
+caps['build'] = os.environ.get("LT_BUILD_NUMBER")
+caps['browserName'] = os.environ.get("LT_BROWSER")
+caps['platform'] = os.environ.get("LT_OPERATING_SYSTEM")
 caps['version']= "67.0"
 #caps['screen_resolution'] = os.environ.get("CBT_RESOLUTION")
 #caps['record_video'] = 'true'
@@ -30,7 +30,7 @@ class BroserStackTest(unittest.TestCase):
         # "selenium_version": "3.7.0",
 
         #}
-        url = "https://dev-ml.lambdatest.com/wd/hub"
+        url = os.environ.get("LT_GRID_URL")
         # url = "http://localhost:4449/wd/hub"
 
 
