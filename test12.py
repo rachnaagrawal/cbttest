@@ -13,7 +13,7 @@ caps['build'] = os.environ.get("LT_BUILD_NUMBER")
 caps['browserName'] = os.environ.get("LT_BROWSER")
 caps['platform'] = os.environ.get("LT_OPERATING_SYSTEM")
 caps['version']= os.environ.get("LT_BROWSER_VERSION")
-#caps['screen_resolution'] = os.environ.get("CBT_RESOLUTION")
+caps['screen_resolution'] = os.environ.get("LT_RESOLUTION")
 #caps['record_video'] = 'true'
 class BroserStackTest(unittest.TestCase):
     def setUp(self):
