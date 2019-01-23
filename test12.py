@@ -7,11 +7,11 @@ import time
 import os
 caps = {}
 username = os.environ.get("LT_USERNAME")
-key = os.environ.get("LT_APIKEY")
+key = os.environ.get("LT_ACCESS_KEY")
 caps['name'] = os.environ.get("LT_BUILD_NAME")
 caps['build'] = os.environ.get("LT_BUILD_NUMBER")
 caps['browserName'] = os.environ.get("LT_BROWSER_NAME")
-caps['platform'] = os.environ.get("LT_OPERATING_SYSTEM")
+caps['platform'] = os.environ.get("LT_PLATFORM")
 caps['version']= os.environ.get("LT_BROWSER_VERSION")
 caps['screen_resolution'] = os.environ.get("LT_RESOLUTION")
 #caps['record_video'] = 'true'
