@@ -8,17 +8,13 @@ import os
 caps = {}
 username = os.environ.get("LT_USERNAME")
 key = os.environ.get("LT_ACCESS_KEY")
-caps['name'] = os.environ.get("LT_BUILD_NAME")
-caps['build'] = os.environ.get("LT_BUILD_NUMBER")
-caps['browserName'] = os.environ.get("LT_BROWSER_NAME")
-caps['platform'] = os.environ.get("LT_PLATFORM")
-caps['version']= os.environ.get("LT_BROWSER_VERSION")
-caps['screen_resolution'] = os.environ.get("LT_RESOLUTION")
+
 #caps['record_video'] = 'true'
 class BroserStackTest(unittest.TestCase):
     def setUp(self):
         self.test_result = None
-        desired_cap = caps
+        desired_cap = "{u'browserVersion': u'71.0', u'browserName': u'Chrome', u'resolution': u'1024x768', u'operatingSystem': u'sierra'}"
+
         #{
         #'platform' : 'WIN10',
         # 'platform' : 'any',
