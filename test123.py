@@ -6,13 +6,13 @@ import os
 from selenium import webdriver
 
 caps = {}
-username = os.environ.get("CBT_USERNAME")
-key = os.environ.get("CBT_APIKEY")
-caps['name'] = os.environ.get("CBT_BUILD_NAME")
-caps['build'] = os.environ.get("CBT_BUILD_NUMBER")
-caps['browser_api_name'] = os.environ.get("CBT_BROWSER")
-caps['os_api_name'] = os.environ.get("CBT_OPERATING_SYSTEM")
-caps['screen_resolution'] = os.environ.get("CBT_RESOLUTION")
+username = os.environ.get("LT_USERNAME")
+key = os.environ.get("LT_ACCESS_KEY")
+caps['name'] = os.environ.get("LT_BUILD_NAME")
+caps['build'] = os.environ.get("LT_BUILD_NUMBER")
+caps['browser_api_name'] = os.environ.get("LT_BROWSER")
+caps['os_api_name'] = os.environ.get("LT_OPERATING_SYSTEM")
+caps['screen_resolution'] = os.environ.get("LT_RESOLUTION")
 caps['record_video'] = 'true'
 print(username,key)
 class SeleniumCBT(unittest.TestCase):
