@@ -21,7 +21,7 @@ class SeleniumCBT(unittest.TestCase):
         # start the remote browser on our server
         self.driver = webdriver.Remote(
             desired_capabilities=caps,
-            command_executor="http://%s:%s@hub.crossbrowsertesting.com:80/wd/hub" % (username, key)
+            command_executor="https://%s:%s@hub.lambdatest.com/wd/hub" % (username, key)
         )
 
         self.driver.implicitly_wait(20)
